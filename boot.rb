@@ -9,3 +9,5 @@ require 'rubygems'
 require 'bundler'
 
 Bundler.require(:default)
+
+Dir["#{BASE_PATH}/config/initializers/*.rb"].each { |f| require f }
