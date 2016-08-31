@@ -1,0 +1,19 @@
+default: &default
+  encoding: utf8
+  adapter: mysql2
+  host: localhost
+  username: root
+  password: root
+  reconnect: true
+
+development:
+  <<: *default
+  database: web_app_demo_dev
+
+test:
+  <<: *default
+  database: web_app_demo_test
+
+production:
+  <<: *default
+  database: web_app_demo
