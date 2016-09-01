@@ -9,9 +9,9 @@ require 'bundler'
 
 Bundler.require(:default)
 
-Dir["#{BASE_PATH}/config/initializers/*.rb"].each { |f| require f }
-
 BASE_PATH = File.dirname(File.absolute_path(__FILE__))
 $: << "#{BASE_PATH}/lib"
+
+Dir["#{BASE_PATH}/config/initializers/*.rb"].each { |f| require f }
 
 require 'model'
