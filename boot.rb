@@ -7,7 +7,7 @@ ENV['RACK_ENV' ] = ENV['APP_ENV']
 require 'rubygems'
 require 'bundler'
 
-Bundler.require(:default)
+Bundler.require(:default, ENV['APP_ENV'].to_sym)
 
 BASE_PATH = File.dirname(File.absolute_path(__FILE__))
 $: << "#{BASE_PATH}/lib"
